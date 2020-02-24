@@ -1,0 +1,239 @@
+@import '../../../commons/app/sass/variable.scss';
+.invitation-page{
+    width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+    .decor-bg{
+        width: 0;
+        height: 0;
+        .decor-corner{
+            position: absolute;
+            width: 40vw;
+            max-width: 200px;
+            &.top{
+                top:10px;
+            }
+            &.bottom{
+                transform: rotate(180deg);
+                bottom:10px;
+            }
+            &.right{
+                right: 10px;
+            }
+            &.left{
+                left: 10px;
+            }
+        }
+    }
+    .invite-card{
+        background-size: contain;
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        .img-size{
+            height: 100vh;
+            max-width: 100vw;
+            opacity: 0;
+        }
+        .content-data{
+            width: 100%;
+            position: absolute;
+            top: 100px;
+            padding: 0 85px;
+            .content-text{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .location-card{
+        min-height: 100vh;
+    }
+    &.option-7{
+        background-image:radial-gradient(circle, #730125 41%, #2c0102 67%);
+
+        .content-data{
+            color: #fecf51;
+            position: static;
+            font-family: $font-cursive6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding:60px 80px;
+            min-height: 100vh;
+            .text-normal{
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }
+            .text-small{
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
+            .text-large{
+                font-size: 2.2rem;
+                line-height: 2.4rem;
+            }
+            @media screen and (max-width:512px){
+                .text-normal{
+                    font-size: 1.3rem;
+                    line-height: 2rem;
+                }
+                .text-small{
+                    font-size: 1.1rem;
+                    line-height: 1.8rem;
+                }
+                .text-large{
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+                p:nth-child(n+3){
+                    margin: 0 -60px;
+                }
+            }
+        }
+    }
+    &.option-4,&.option-5,&.option-6{
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        padding: 0;
+        .img-size{
+            display: none;
+        }
+        .invite-card{
+            display: flex;
+            width: 100%;
+            min-height: calc(100vh);
+            // @include invitationBg3;
+            font-family: $font-cursive3;
+            .content-data{
+                color: #313233;
+                position: static;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                // top: 0;
+                // bottom: 0;
+                // left: 0;
+                // right: 0;
+                padding: 40px;
+                margin: 25px;
+                .flip-card{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    &.option-6{
+        @include bgImage('bgimg3.jpg');
+        .invite-card{
+            border: 15px solid rgba(#fff,0.5);
+            .content-data{
+                background-color: rgba(#fff,0.5);
+                .flip-card{
+                    font-family: $font-cursive3;
+                }
+            }
+        }
+    }
+    &.option-5{
+        //background-image: url('../asset/img/bgimg2.jpeg');
+        font-family: $font-cursive3;
+        color: #fecf51;
+        .text-normal{
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+        .text-small{
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+        .text-large{
+            font-size: 2.2rem;
+            line-height: 2.4rem;
+        }
+        .invite-card{
+            @include bgImage('bgimg2.jpeg');
+            background-size: cover;
+            background-position: 50% 0%;
+            .content-data{
+                color: #fecf51;
+                @media screen and (max-width:512px) {
+                    padding:24px;
+                }
+                .flip-card{
+                    font-family: $font-cursive3;
+                }
+            }
+        }
+        .location-card{
+            background-color: #880608;
+            position: relative;
+            padding: 50px;
+            @media screen and (max-width:512px){
+                padding:30px;
+            }
+            h1{
+                margin: 0 0 20px;
+            }
+            .map-frame{
+                width: 85%;
+                height: 40vh;
+            }
+            .decor-bg .decor-corner{
+                width: 25vw;
+            }
+            //@include bgImage('pattern.png');
+            //background-size: contain;;
+        }
+    }
+    &.option-4{
+        @include bgImage('bgtemp.jpg');
+        //background-image: url('../asset/img/bgtemp.jpg');
+        background-attachment: fixed;
+
+        .invite-card{
+            border: 15px solid rgba(#fff,0.5);
+            .content-data{
+                background-color: rgba(#fff,0.5);
+            }
+        }
+    }
+    &.option-3{
+        .invite-card{
+            @include bgImage('invite3.png');
+            font-family: $font-cursive3;
+        }
+    }
+    &.option-2{
+        background-image:radial-gradient(circle, #730125 41%,#410102 51%, #2c0102 67%);
+        .invite-card{
+            @include bgImage('invite2.png');
+            font-family: $font-cursive3;
+        }
+        .content-data{
+            color: #ad7f52;
+            top: 145px;
+            padding: 0px 120px;
+        }
+    }
+    &.option-1{
+        background-color: #750135;
+        .invite-card{
+            @include bgImage('invite1.png');
+            font-family: $font-cursive3;
+
+            // .img-size{
+            //     height: 100vh;
+            //     max-width: 100vw;
+            //     opacity: 0;
+            // }
+            .content-data{
+                color: #ad7f52;
+                @media screen and (max-width:512px) {
+
+                }
+            }
+        }
+    }
+}

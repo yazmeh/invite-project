@@ -1,0 +1,20 @@
+@mixin bgImage($imgName) {
+    background-image: url('../../../commons/app/asset/img/#{$imgName}');
+}
+
+@mixin invitationBg1 {
+    background-image: url('../asset/img/invite1.png');
+}
+@mixin invitationBg2 {
+    background-image: url('../asset/img/invite2.png');
+}
+@mixin invitationBg3 {
+    background-image: url('../asset/img/invite3.png');
+}
+$font-normal:'san-serif';
+$font-cursive1:'precious';
+$font-cursive2:'samartan';
+$font-cursive3:'greatvibe';
+$font-cursive4:'allura';
+$font-cursive5:'awesome';
+$font-cursive6:'als';

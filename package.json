@@ -1,0 +1,51 @@
+{
+    "name": "invite-project",
+    "version": "1.0.0",
+    "main": "app.js",
+    "license": "MIT",
+    "scripts": {
+        "dev": "node buildAll.js --cmd='npm run dev'",
+        "watch": "npm run dev -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+        "prod": "node buildAll.js --cmd='npm run prod'",
+        "preproduction": "rimraf public/build/*",
+        "production": "build --path='resources/src/@(commons|*-app)' --command='npm run prod --silent'"
+    },
+    "devDependencies": {
+        "axios": "^0.19",
+        "bootstrap": "^4.1.0",
+        "cross-env": "^5.1",
+        "css-loader": "^3.4.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^4.0.7",
+        "lodash": "^4.17.13",
+        "mini-css-extract-plugin": "^0.9.0",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
+        "style-loader": "^1.1.2",
+        "vue": "2.6.11"
+    },
+    "dependencies": {
+        "@babel/core": "^7.7.7",
+        "@babel/preset-env": "^7.8.2",
+        "@babel/preset-react": "^7.7.4",
+        "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+        "@vue/babel-preset-jsx": "^1.1.2",
+        "babel-loader": "^8.0.6",
+        "babel-preset-vue": "^2.0.2",
+        "build": "^0.1.4",
+        "file-loader": "1.1",
+        "minimist": "^1.2.0",
+        "normalize.css": "^8.0.1",
+        "rimraf": "^3.0.2",
+        "tailwindcss": "^1.1.4",
+        "url-loader": "0.6",
+        "vue-loader": "^15.8.3",
+        "vue-template-compiler": "^2.6.11",
+        "vue2-flip-countdown": "^0.9.3",
+        "webpack": "^4.41.6"
+    }
+}
