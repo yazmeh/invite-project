@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo 'installing packages'
+      - npm install
+      - composer install
+      - npm run load
+  pre_build:
+    commands:
+      - start-nginx.sh
+      - echo 'pre building'
+      - cp .env.example .env
+  build:
+    commands:
+      - npm run prod
+  post_build:
+    commands:
+      - start-nginx
