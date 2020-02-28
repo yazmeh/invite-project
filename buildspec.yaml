@@ -2,6 +2,9 @@ version: 0.2
 
 
 phases:
+  install:
+    runtime-versions:
+      php: 7.3
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -13,6 +16,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - cp .env.example .env
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG

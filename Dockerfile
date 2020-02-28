@@ -8,6 +8,7 @@ run npm install
 run npm run load
 run composer install
 copy .env.example .env
+run php artisan key:generate
 run npm run prod
 
 

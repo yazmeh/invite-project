@@ -5,7 +5,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "node buildAll.js --cmd='npm run dev'",
-        "prod": "node buildAll.js --cmd='npm run prod'",
+        "prod": "node buildAll.js --cmd='npm run prod --silent'",
         "preprod": "rimraf public/build/*",
         "predev": "rimraf public/build/*",
         "load": "node buildAll.js --cmd='npm install'",
