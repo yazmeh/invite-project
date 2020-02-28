@@ -8,7 +8,8 @@
         "prod": "node buildAll.js --cmd='npm run prod'",
         "preprod": "rimraf public/build/*",
         "predev": "rimraf public/build/*",
-        "load": "node buildAll.js --cmd='npm install'"
+        "load": "node buildAll.js --cmd='npm install'",
+        "setup": "node setup.js"
     },
     "devDependencies": {
         "axios": "^0.19",
