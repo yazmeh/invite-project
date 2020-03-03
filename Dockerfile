@@ -12,19 +12,17 @@ run curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     && rm -f /tmp/composer-setup.*
 COPY .docker/start-nginx.sh  /bin/start-nginx.sh
 run chmod +x /bin/start-nginx.sh
-run ln -s /usr/local/bin/node /usr/bin/node \
-    && /usr/local/lib/node /usr/lib/node \
-    && /usr/local/bin/npm /usr/bin/npm
+
 WORKDIR /usr/src/app
 
 copy . .
 
-run npm install
-run npm run load
 run composer install
+run yarn
+run yarn load
 copy .env.example .env
 run php artisan key:generate
-run npm run prod
+run yarn prod
 
 
 expose 8080
