@@ -18,6 +18,8 @@ phases:
     commands:
       - echo Build started on `date`
       - npm install
+      - npm run load
+      - npm run prod
       - cp .env.example .env
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
