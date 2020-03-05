@@ -5,7 +5,7 @@ phases:
   install:
     runtime-versions:
       php: 7.3
-      nodejs: 8.0
+      nodejs: 8
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -18,6 +18,8 @@ phases:
     commands:
       - echo Build started on `date`
       - npm install
+      - npm run load
+      - npm run prod
       - cp .env.example .env
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .

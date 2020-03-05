@@ -26,7 +26,7 @@ run composer install
 # run npm install
 # run npm run load
 # copy .env.example .env
-# run php artisan key:generate
+run php artisan key:generate
 # run npm run prod
 
 
