@@ -1,0 +1,18 @@
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	server_name _;
+	root /usr/src/app/public;
+	index index.php index.html;
+
+	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+	}
+
+	location ~ \.php$ {
+		fastcgi_pass unix:/var/run/php7.2-fpm.sock;
+		include /etc/nginx/fastcgi.conf;
+		fastcgi_index index.php;
+	}
+}

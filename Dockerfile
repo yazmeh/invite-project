@@ -11,6 +11,10 @@ run curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     && php /tmp/composer-setup.php --no-ansi --install-dir=/usr/local/bin --filename=composer --snapshot \
     && rm -f /tmp/composer-setup.*
 COPY .docker/start-nginx.sh  /bin/start-nginx.sh
+COPY .docker/nginx.conf  /etc/nginx/nginx.conf
+COPY .docker/defaultServer  /etc/nginx/site-available/defaultServer
+COPY .docker/php-fpm.conf /etc/php/7.2/fpm/pool.d/www.conf
+
 run chmod +x /bin/start-nginx.sh
 
 RUN apt-get -y install npm
@@ -28,4 +32,4 @@ run composer install
 
 #expose 8080
 
-cmd bash;
+cmd start-nginx.sh && bash;
