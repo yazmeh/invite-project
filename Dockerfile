@@ -12,7 +12,7 @@ run curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     && rm -f /tmp/composer-setup.*
 COPY .docker/start-nginx.sh  /bin/start-nginx.sh
 COPY .docker/nginx.conf  /etc/nginx/nginx.conf
-COPY .docker/defaultServer  /etc/nginx/sites-available/defaultServer
+COPY .docker/defaultServer  /etc/nginx/sites-available/default
 COPY .docker/php-fpm.conf /etc/php/7.2/fpm/pool.d/www.conf
 
 run chmod +x /bin/start-nginx.sh
