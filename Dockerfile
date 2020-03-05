@@ -12,12 +12,11 @@ run curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     && rm -f /tmp/composer-setup.*
 COPY .docker/start-nginx.sh  /bin/start-nginx.sh
 COPY .docker/nginx.conf  /etc/nginx/nginx.conf
-COPY .docker/defaultServer  /etc/nginx/site-available/defaultServer
+COPY .docker/defaultServer  /etc/nginx/sites-available/defaultServer
 COPY .docker/php-fpm.conf /etc/php/7.2/fpm/pool.d/www.conf
 
 run chmod +x /bin/start-nginx.sh
 
-RUN apt-get -y install npm
 WORKDIR /usr/src/app
 
 copy . /usr/src/app
@@ -32,4 +31,4 @@ run php artisan key:generate
 
 #expose 8080
 
-cmd start-nginx.sh && bash;
+cmd start-nginx.sh;
