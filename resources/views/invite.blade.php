@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('header')
+@section('headers')
     <link href="{{ asset('build/invite-app/main.css') }}" rel="stylesheet">
 @endsection
 @section('content')
