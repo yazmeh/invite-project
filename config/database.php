@@ -2,6 +2,23 @@
 
 use Illuminate\Support\Str;
 
+$dbDetails=[
+    'host' => env('DB_HOST', '127.0.0.1'),
+    'port' => env('DB_PORT', '3306'),
+    'database' => env('DB_DATABASE', 'forge'),
+    'username' => env('DB_USERNAME', 'forge'),
+    'password' => env('DB_PASSWORD', ''),
+];
+if(!app()->isLocal()){
+    $dbDetails=[
+        'host' => $_SERVER['RDS_HOSTNAME'],
+        'port' => $_SERVER['RDS_PORT'],
+        'database' => $_SERVER['RDS_DB_NAME'],
+        'username' => $_SERVER['RDS_USERNAME'],
+        'password' => $_SERVER['RDS_PASSWORD'],
+    ];
+}
+
 return [
 
     /*
@@ -46,11 +63,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => $dbDetails['host'],
+            'port' => $dbDetails['port'],
+            'database' => $dbDetails['database'],
+            'username' => $dbDetails['username'],
+            'password' => $dbDetails['password'],
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

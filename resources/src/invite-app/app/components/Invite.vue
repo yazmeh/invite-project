@@ -33,7 +33,7 @@
                 <img :src="bgImg.decor" class="decor-corner bottom right"/>
             </div>
             <div class="location-content">
-                <h1 class="text-large">Location and Time</h1>
+                <h1 class="text-large">Location</h1>
                 <p class="text-small">Whispering Palm Club House, Lokhandwala Township</p>
                 <p class="text-small">,Akurli Road, Kandivali(East)</p>
                 <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d941.9764105648102!2d72.8711007!3d19.1993232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b715862a3397%3A0x8dea239a3ed1a0f2!2sWhispering%20Palms%20Club%20House!5e0!3m2!1sen!2sin!4v1582557996289!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
