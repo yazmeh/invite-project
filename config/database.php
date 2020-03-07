@@ -9,15 +9,15 @@ $dbDetails=[
     'username' => env('DB_USERNAME', 'forge'),
     'password' => env('DB_PASSWORD', ''),
 ];
-if(!app()->isLocal()){
-    $dbDetails=[
-        'host' => $_SERVER['RDS_HOSTNAME'],
-        'port' => $_SERVER['RDS_PORT'],
-        'database' => $_SERVER['RDS_DB_NAME'],
-        'username' => $_SERVER['RDS_USERNAME'],
-        'password' => $_SERVER['RDS_PASSWORD'],
-    ];
-}
+// if(!app()->isLocal()){
+//     $dbDetails=[
+//         'host' => $_SERVER['RDS_HOSTNAME'],
+//         'port' => $_SERVER['RDS_PORT'],
+//         'database' => $_SERVER['RDS_DB_NAME'],
+//         'username' => $_SERVER['RDS_USERNAME'],
+//         'password' => $_SERVER['RDS_PASSWORD'],
+//     ];
+// }
 
 return [
 

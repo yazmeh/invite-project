@@ -12,17 +12,17 @@
                 <div class="content-text">
                     <p class="text-large">Mehata Family</p>
                     <p class="text-normal">Cordially invites you to the</p>
-                    <p class="text-normal">Enagagement Ceremony</p>
+                    <p class="text-normal">Engagement Ceremony</p>
                     <p class="text-normal">Of</p>
-                    <p class="text-large">Vishal Mehata</p>
+                    <p class="text-large">Vishal</p>
                     <p class="text-small">Son of Narendrakumar &amp; Daksha Mehata </p>
                     <p class="text-large"> &amp;</p>
-                    <p class="text-large">Meha Damania</p>
+                    <p class="text-large">Meha</p>
                     <p class="text-small">Daughter of Amit &amp; Dimple Damania </p>
-                    <p class="text-normal">On 24th March 2020, 6-10pm</p>
+                    <p class="text-normal">On 17th May 2020, 6-10pm</p>
                     <p class="text-normal">Do Join us Dinner!!</p>
                 </div>
-                <flip-countdown deadline="2020-03-24 18:00:00"></flip-countdown>
+                <flip-countdown deadline="2020-05-17 18:00:00"></flip-countdown>
             </div>
         </div>
         <div class="location-card">

@@ -6,9 +6,13 @@
     <meta name="description" content="Mehata family invites you">
     <meta name="author" content="Yash Mehata">
 
+    <meta property="og:site_name" content="Invitation">
     <meta property="og:title" content="Invitation">
     <meta property="og:description" content="Mehata family invites you to the Enagement Ceremony of Vishal Mehata and Hiral Damania">
     <meta property="og:author" content="Yash Mehata">
+    <meta property="og:image" itemprop="image" content="/favicon.ico">
+    <meta property="og:type" content="website" />
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
